@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>liczenie</title>
+    </head>
+    <body>
+        <h1>W twoim tekście jest {{ count }} słów!</h1>
+
+        <a href="{% url 'home' %}">Nowy tekst</a>
+
+        <h1>Twój pełny tekst:</h1>
+
+        {{ fulltext}}
+
+        <h1>Word Count:</h1>
+
+        {% for word, counttotal in sortedwords %}
+
+        {{ word }} - {{ counttotal }}
+
+        <br/><br/>
+        {% endfor %}
+
+    </body>
+</html>
